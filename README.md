@@ -36,3 +36,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# STEPS
+1.) remove unncessary files
+2.) npm install -D tailwindcss postcss autoprefixer
+3.) if not available yet run:
+ 	npx tailwindcss init -p
+	this will genereate tailwind.config.js and postcss.config.js
+	then add 
+		*./app/**/*.{js, ts, jsx, tsx}
+		*./pages/**/*.{js, ts, jsx, tsx}
+		*./component/**/*.{js, ts, jsx, tsx}
+
+	in content area of tailwind.config.js
+4.) npm install react-icons
+5.) npm install zustand (global state management library)
+6.) npm install -D prisma
+	npx prisma init
+	npx prisma push (after creating model in prisma schema)
+7.) npm install @prisma/client
+8.) create new folder "libs" in the root folder
+	create new file "prismadb.ts" under libs
+	
+9.) create new file [...nextauth].ts under pages/api/auth
+	npm install bcrypt
+	npm install -D @types/bcrypt
+	npm install next-auth
+	npm install @next-auth/prisma-adapter
+10.) npm install swr
+	 npm install axios
+	 npm install react-hot-toast
